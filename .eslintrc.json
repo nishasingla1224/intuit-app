@@ -1,0 +1,123 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended",
+      "plugin:css-modules/recommended",
+      "plugin:prettier/recommended",
+      "prettier/flowtype",
+      "prettier/react"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": ["flowtype", "css-modules", "prettier", "react"],
+    "rules": {
+      "react/jsx-props-no-spreading": "off",
+      "no-underscore-dangle": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "ignoreRestSiblings": true
+        }
+      ],
+      "import/no-cycle": "off",
+      "import/no-extraneous-dependencies": [
+        "warn",
+        {
+          "packageDir": "."
+        }
+      ],
+      "camelcase": [
+        "error",
+        {
+          "properties": "never",
+          "ignoreDestructuring": true,
+          "allow": ["^UNSAFE_"]
+        }
+      ],
+    //   "no-console": [
+    //     "error",
+    //     {
+    //       "allow": ["warn", "error", "info"]
+    //     }
+    //   ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "VariableDeclarator": {
+            "array": false,
+            "object": true
+          },
+          "AssignmentExpression": {
+            "array": false,
+            "object": false
+          }
+        },
+        {
+          "enforceForRenamedProperties": false
+        }
+      ],
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": ["Link"],
+          "specialLink": ["to"],
+          "aspects": ["noHref", "invalidHref", "preferButton"]
+        }
+      ],
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [".js", ".jsx"]
+        }
+      ],
+      "jsx-a11y/no-static-element-interactions": [
+        "off",
+        {
+          "handlers": [
+            "onClick",
+            "onMouseDown",
+            "onMouseUp",
+            "onKeyPress",
+            "onKeyDown",
+            "onKeyUp"
+          ]
+        }
+      ],
+  
+      "jsx-a11y/click-events-have-key-events": ["off"],
+      "jsx-a11y/no-noninteractive-element-interactions": ["off"],
+      "react/prefer-stateless-function": "off",
+      "prettier/prettier": "error",
+      "react/forbid-prop-types": "off",
+      "react/destructuring-assignment": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "alias": {
+          "map": [
+            ["@src", "./src"],
+            ["@components", "./src/components"],
+            ["@templates", "./src/components/templates"],
+            ["@pages", "./src/components/pages"],
+            ["@images", "./src/image"],
+            ["@utils", "./src/utils"]
+          ]
+        }
+      }
+    }
+  }
+  

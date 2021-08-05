@@ -1,0 +1,79 @@
+{
+  "name": "assignment",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "node-sass": "^6.0.0",
+    "prettier": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "react-test-renderer": "^17.0.2",
+    "web-vitals": "^1.1.2"
+  },
+  "lint-staged": {
+    "ignore": [
+      "package.json"
+    ],
+    "linters": {
+      "*.{js,jsx}": [
+        "eslint --no-ignore --fix",
+        "git add --force"
+      ],
+      "*.{json,md}": [
+        "prettier --write",
+        "git add --force"
+      ],
+      "*.{css,less,styl,scss,sass}": [
+        "stylelint --fix",
+        "git add --force"
+      ]
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-css-modules": "^2.11.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+h1 {
+    color: #f8f8f8;
+    font-family: helvetica;
+  }
+  
+.mainContainer{
+    text-align: center;
+
+    .welcomeText{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    
+    .header{
+        margin: 20px auto;
+    }
+
+    .cardContainer{
+        border: 2px solid black;
+        padding: 10px;
+        background: grey;
+    }
+}
