@@ -30,7 +30,7 @@ export const debounce = (fn,delay) => {
 }
 
 export const getOnlySymbols = (resultArr) => {
-	return resultArr.map(obj => obj["1. symbol"]);
+	return resultArr && resultArr.map(obj => obj["1. symbol"]) || [] ;
 }
 
 export const fillStockDetails = (dataToShow, resp) => {

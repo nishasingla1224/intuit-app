@@ -2,7 +2,11 @@ body {
   background: #fff;
   color: #000;
   display: flex;
-  justify-content: center;
+  #root {
+    width: 50%;
+  margin: 0 auto;
+  }
+  
 }
 
 *{

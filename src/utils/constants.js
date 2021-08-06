@@ -1,8 +1,8 @@
-const refreshingTimeInterval = 5; // in seconds
+const refreshingTimeInterval = 500; // in seconds
 
 const maxSearchInstancesToBeStored = 5;
 
-
+const NoStockFound = "No Stock Found";
 const dataToShow = [
 	{
 		keyName : "Name",
@@ -49,5 +49,6 @@ const dataToShow = [
 export {
 	refreshingTimeInterval,
 	maxSearchInstancesToBeStored,
-	dataToShow
+	dataToShow,
+	NoStockFound
 }

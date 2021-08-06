@@ -11,14 +11,18 @@ h1 {
         font-weight: 600;
         margin-bottom: 20px;
     }
-    
+
     .header{
         margin: 20px auto;
+        display: flex;
+        flex-direction: column;
     }
-
-    .cardContainer{
-        border: 2px solid black;
-        padding: 10px;
-        background: grey;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    .nextPrev {
+        height : 25px;
     }
 }

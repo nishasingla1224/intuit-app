@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 // eslint-disable-next-line react/prop-types
 const StockDetailsCard = ({stockDetails}) => {
